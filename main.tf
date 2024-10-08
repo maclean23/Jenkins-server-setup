@@ -8,9 +8,9 @@ resource "aws_instance" "test_instances" {
   user_data = <<-EOF
                 #! /bin/bash
                 sudo apt-get update
-                sudo git clone http://github.com/maclean23/labs
-                sudo chmod -R 775 labs
-                sudo labs/cloud/setup-user.sh
+                sudo git clone http://github.com/maclean23/Jenkins-server-setup
+                sudo chmod -R Jenkins-server-setup 
+                sudo Jenkins-server-setup/ubuntu-setup-user.sh
         EOF
 
   tags = {
